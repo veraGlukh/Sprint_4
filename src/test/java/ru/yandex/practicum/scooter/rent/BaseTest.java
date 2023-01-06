@@ -1,4 +1,4 @@
-package Features;
+package ru.yandex.practicum.scooter.rent;
 
 import org.junit.After;
 import org.junit.Before;
@@ -7,7 +7,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 // import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class BaseTest {
-
     WebDriver driver;
 
     @Before

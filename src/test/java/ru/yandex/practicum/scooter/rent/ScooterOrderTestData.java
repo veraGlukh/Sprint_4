@@ -1,4 +1,4 @@
-package Features;
+package ru.yandex.practicum.scooter.rent;
 
 public class ScooterOrderTestData {
     public String name;

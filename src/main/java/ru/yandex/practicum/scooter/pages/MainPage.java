@@ -1,4 +1,4 @@
-package ru.yandex.practicum;
+package ru.yandex.practicum.scooter.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -11,58 +11,40 @@ public class MainPage {
 
     // Кнопка Заказать в правом верхнем углу
     private By topOrderButton = By.xpath(".//div[@class='Header_Nav__AGCXC']/button[text()='Заказать']");
-
     // Кнопка Заказать после схемы
     private By bottomOrderButton = By.xpath(".//div[@class='Home_FinishButton__1_cWm']/button[text()='Заказать']");
-
     // Вопрос о важном 1 - про оплату
     private By questionPayment = By.id("accordion__heading-0");
-
     // Ответ 1 - про оплату
     private By replyPayment = By.xpath(".//div[@id='accordion__panel-0']/p");
-
     // Вопрос о важном 2 - про количество самокатов
     private By questionScootersAmount = By.id("accordion__heading-1");
-
     //  Ответ 2 - про количество самокатов
     private By replyScootersAmount = By.xpath(".//div[@id='accordion__panel-1']/p");
-
     // Вопрос о важном 3 - про время аренды
     private By questionRentTime = By.id("accordion__heading-2");
-
     //  Ответ 3 - про время аренды
     private By replyRentTime = By.xpath(".//div[@id='accordion__panel-2']/p");
-
     // Вопрос о важном 4 - про заказ на сегодня
     private By questionTodayOrder = By.id("accordion__heading-3");
-
     //  Ответ 4 - про заказ на сегодня
     private By replyTodayOrder = By.xpath(".//div[@id='accordion__panel-3']/p");
-
     // Вопрос о важном 5 - про продление и ранний возврат
     private By questionOrderExtension = By.id("accordion__heading-4");
-
     //  Ответ 5 - про продление и ранний возврат
     private By replyOrderExtension = By.xpath(".//div[@id='accordion__panel-4']/p");
-
     // Вопрос о важном 6 - про зарядку самоката
     private By questionCharger = By.id("accordion__heading-5");
-
     //  Ответ 6 - про зарядку самоката
     private By replyCharger = By.xpath(".//div[@id='accordion__panel-5']/p");
-
     // Вопрос о важном 7 - про отмену заказа
     private By questionOrderCancellation = By.id("accordion__heading-6");
-
     //  Ответ 7 - про отмену заказа
     private By replyOrderCancellation = By.xpath(".//div[@id='accordion__panel-6']/p");
-
     // Вопрос о важном 8 - про доставку за МКАД
     private By questionDeliveryOutsideMoscow = By.id("accordion__heading-7");
-
     //  Ответ 8 - про доставку за МКАД
     private By replyDeliveryOutsideMoscow = By.xpath(".//div[@id='accordion__panel-7']/p");
-
 
     // Конструктор класса
     public MainPage(WebDriver driver) {
@@ -83,14 +65,14 @@ public class MainPage {
     // Метод клика по нижней кнопке Заказать:
     public void clickBottomOrderButton() {
         WebElement element = driver.findElement(bottomOrderButton); // скролл до кнопки
-        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", element);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
         driver.findElement(bottomOrderButton).click();
     }
 
     // Метод прокрутки до последнего вопроса в разделе Вопросы о важном:
     public void scrollToTheLastQuestion() {
         WebElement element = driver.findElement(questionDeliveryOutsideMoscow);
-        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", element);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
     }
 
     //Метод получения текста Ответа 1
